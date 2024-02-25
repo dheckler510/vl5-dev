@@ -1,9 +1,11 @@
 # Motor Control
 import time
 import threading
-from adafruit_motor import stepper
+
 from adafruit_motorkit import MotorKit
 import board
+from adafruit_motor import stepper
+from adafruit_motorkit import MotorKit
 
 # Constants
 MOTOR_POSITIONS_FILE = "motor_positions.txt"
