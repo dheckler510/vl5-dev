@@ -1,8 +1,8 @@
 # Motor Control
 import time
 import threading
-from adafruit_motorkit import MotorKit
 from adafruit_motor import stepper
+from adafruit_motorkit import MotorKit
 import board
 
 # Constants
