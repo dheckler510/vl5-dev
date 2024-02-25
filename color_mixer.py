@@ -6,8 +6,8 @@ import board
 import motor_control
 
 # Initialize MotorKits
-kit1 = MotorKit(i2c=board.I2C())
-kit2 = MotorKit(i2c=board.I2C())
+kit1 = MotorKit()
+kit2 = MotorKit(address=0x61)
 
 # Create intuitive variables
 cyan_motor = kit1.stepper1
