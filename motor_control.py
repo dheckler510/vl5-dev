@@ -70,3 +70,4 @@ def move_motor(motor, target_position):
 
 # Load positions at the start
 load_motor_positions()
+set_color('blue')
