@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
 import motor_control  # Your motor control file
-from motor_control import cyan_motor, magenta_motor, yellow_motor, diff_motor
+from color_mixer import cyan_motor, magenta_motor, yellow_motor, diff_motor
 
 app = Flask(__name__)
 
