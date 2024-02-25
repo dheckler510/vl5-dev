@@ -1,6 +1,6 @@
 import time
 import threading
-from color-mixer import cyan_motor, yellow_motor, magenta_motor, diff_motor
+from color_mixer import cyan_motor, yellow_motor, magenta_motor, diff_motor
 
 # Constants
 MOTOR_POSITIONS_FILE = "motor_positions.txt"
