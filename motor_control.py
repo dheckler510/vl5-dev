@@ -7,11 +7,23 @@ MAX_MOTOR_STEPS = 380  # Update this to your motor's step count
 
 # Load motor positions from file on startup
 def load_motor_positions():
-    # ... (Same as before) ...
+    try:
+        with open(MOTOR_POSITIONS_FILE, 'r') as f:
+            positions = f.readlines()
+            cyan_motor.stepper._position = int(positions[0])
+            magenta_motor.stepper._position = int(positions[1])
+            yellow_motor.stepper._position = int(positions[2])
+            diff_motor.stepper._position = int(positions[3])
+    except (FileNotFoundError, ValueError):
+        print("No previous position file or invalid data. Using defaults.")
 
 # Save motor positions to file
 def save_motor_positions():
-    # ... (Same as before) ...
+    with open(MOTOR_POSITIONS_FILE, 'w') as f:
+        f.write(str(cyan_motor.stepper._position) + "\n")
+        f.write(str(magenta_motor.stepper._position) + "\n")
+        f.write(str(yellow_motor.stepper._position) + "\n")
+        f.write(str(diff_motor.stepper._position) + "\n")
 
 # Scaling function
 def scale_value(value, max_steps=MAX_MOTOR_STEPS):
